@@ -20,18 +20,15 @@ import addHeaderLevelProgress from './features/add-header-level-progress'
 import hideMatchRoomPlayerControls from './features/hide-match-room-player-controls'
 import hideFaceitClientHasLandedBanner from './features/hide-faceit-client-has-landed-banner'
 import addSidebarMatchesEloPoints from './features/add-sidebar-matches-elo-points'
-import addProfileMatchesEloPoints from './features/add-profile-matches-elo-points'
 import clickMatchRoomVetoLocations from './features/click-match-room-veto-locations'
 import clickMatchRoomVetoMaps from './features/click-match-room-veto-maps'
 import clickModalMatchRoomCaptainOk from './features/click-modal-match-room-captain-ok'
-import addMatchRoomConnectToServerDelayed from './features/add-match-room-connect-to-server-delayed'
 import addPlayerProfileLevelProgress from './features/add-player-profile-level-progress'
 import addMatchRoomPickPlayerStats from './features/add-match-room-pick-player-stats'
 import addMatchRoomPickPlayerElos from './features/add-match-room-pick-player-elos'
 import addMatchRoomPickPlayerFlags from './features/add-match-room-pick-player-flags'
 import showSidebarMatchmakingQueuing from './features/show-sidebar-matchmaking-queuing'
 import addSidebarHideButton from './features/add-sidebar-hide-button'
-import addPlayerProfileDownloadDemo from './features/add-player-profile-download-demo'
 import addPlayerProfileExtendedStats from './features/add-player-profile-extended-stats'
 import clickModalClose from './features/click-modal-close'
 import showSidebarHubQueuing from './features/show-sidebar-hub-queuing'
@@ -68,7 +65,6 @@ function observeMainContent(element) {
         element
       )
       runFeatureIf('matchRoomAutoVetoMaps', clickMatchRoomVetoMaps, element)
-      addMatchRoomConnectToServerDelayed(element)
       addMatchRoomPickPlayerStats(element)
       addMatchRoomPickPlayerElos(element)
       addMatchRoomPickPlayerFlags(element)
@@ -78,8 +74,6 @@ function observeMainContent(element) {
         addPlayerProfileLevelProgress,
         element
       )
-      addProfileMatchesEloPoints(element)
-      addPlayerProfileDownloadDemo(element)
       addPlayerProfileExtendedStats(element)
     }
   }
@@ -127,8 +121,6 @@ function observeBody() {
           addPlayerProfileLevelProgress,
           modalElement
         )
-        addProfileMatchesEloPoints(modalElement)
-        addPlayerProfileDownloadDemo(modalElement)
         addPlayerProfileExtendedStats(modalElement)
       }
     }

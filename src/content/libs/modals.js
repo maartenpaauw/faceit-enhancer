@@ -24,5 +24,8 @@ export const isMatchDefeat = parent =>
 export const isMatchVictory = parent =>
   select.exists('h2[translate-once="VICTORY"]', parent)
 
+export const isMatchDisbanded = parent =>
+  select.exists('h3[translate-once="MATCH-CANCELLED"]', parent)
+
 export const isPlayerProfileStats = () =>
   /players-modal\/.+\/stats\//.test(getCurrentPath())

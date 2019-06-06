@@ -50,5 +50,10 @@ export default ({ getSwitchProps }) => (
       secondary="Close match defeat pop up automatically."
       {...getSwitchProps('modalCloseMatchDefeat')}
     />
+    <ListItemSwitch
+      primary="Close Match Disbanded"
+      secondary="Close match disbanded pop up automatically."
+      {...getSwitchProps('modalCloseMatchDisbanded')}
+    />
   </React.Fragment>
 )
